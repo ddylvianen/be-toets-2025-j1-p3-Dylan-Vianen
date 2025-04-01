@@ -372,7 +372,7 @@ CREATE TABLE Cyberaanval
      Jaar               SMALLINT UNSIGNED    NOT NULL,
      AantalSlachtoffers BIGINT UNSIGNED      NOT NULL,
      TypeAanval         VARCHAR(100)         NOT NULL,
-     Schade             DECIMAL(10,2)        NOT NULL,
+     Schade             BIGINT UNSIGNED      NOT NULL,
      IsActief           TINYINT(1)           NOT NULL DEFAULT 1,
      Opmerking          VARCHAR(255)              NULL DEFAULT NULL,
      DatumAangemaakt    DATETIME             NOT NULL,
@@ -403,8 +403,9 @@ INSERT INTO Cyberaanval
      DatumGewijzigd
 )
 VALUES
- ('WannaCry', 2017, 230, 'Ransomware', 4000.00, 1, NULL, NOW(), NOW()),
- ('Yahoo Datalek', 2013, 3000, 'Datalek', 350.00, 1, NULL, NOW(), NOW()),
- ('Equifax Hack', 2017, 147, 'Datalek', 700.00, 1, NULL, NOW(), NOW()),
- ('Target Hack', 2013, 110, 'Creditcardgegevens gestolen', 18.50, 1, NULL, NOW(), NOW()),
- ('Marriott Hack', 2014, 500, 'Datalek', 100.00, 1, NULL, NOW(), NOW());
+ ('WannaCry', 2017, 230, 'Ransomware', 4000, 1, NULL, NOW(), NOW()),
+ ('Yahoo Datalek', 2013, 3000, 'Datalek', 350, 1, NULL, NOW(), NOW()),
+ ('Equifax Hack', 2017, 147, 'Datalek', 700, 1, NULL, NOW(), NOW()),
+ ('Target Hack', 2013, 110, 'Creditcardgegevens gestolen', 18, 1, NULL, NOW(), NOW()),
+ ('Marriott Hack', 2014, 500, 'Datalek', 100, 1, NULL, NOW(), NOW());
+
